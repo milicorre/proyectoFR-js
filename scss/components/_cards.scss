@@ -1,0 +1,40 @@
+.container-cards{
+    @include container-cards;
+}
+@media only screen and (max-width:570px ){
+    .container-cards{
+        width: 100vh;
+    }
+   
+}
+
+.card-group{
+    margin-bottom: 10px;
+    transition: all 5s;
+    &:hover{
+        transform:scale(1.1) !important;
+    }
+    .card-body {
+        background-color: rgba(206,182,204,0.75);
+        text-align: center;
+        .card-title{
+            color: #000;
+            text-decoration: none ;
+            font-family:'Yellowtail', cursive;
+            text-align: center;
+            font-weight: lighter;
+            font-size: 30px;
+            margin-bottom: 5px;
+            text-decoration: none !important;
+        }
+        .card-text{
+            text-indent: 1rem;
+
+        }
+    }
+    .text-muted{
+        text-indent: 1rem;
+
+    }
+
+}

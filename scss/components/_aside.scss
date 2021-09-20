@@ -1,0 +1,29 @@
+.secProductos {
+    @include container-body;
+    border-top:solid 0.5px #000 ;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    color: black;
+    font-size: 20px;  
+    .secProductosText{
+        h4{
+            padding-bottom: 10px;
+            text-align: center;
+            font-weight: bolder;
+            
+        }
+        p{
+          text-indent: 1rem;
+          a{
+            text-decoration: none;
+            color: #000;
+            font-weight: bolder;
+            &:hover{
+                text-shadow: 5px 5px 10px nth($colores, 3 ); 
+              }
+          }
+
+        }
+    }
+}
+

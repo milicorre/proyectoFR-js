@@ -1,0 +1,330 @@
+*{
+    margin: 0; 
+    padding: 0; 
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+/*Seccion portada img*/
+.portada {
+    padding: 5px 5px;
+    width: 100%;
+    background-color:black; 
+    z-index: 25;
+    text-align: center;
+}
+.contenedorLogoMenu {
+    display: flex; 
+    flex-direction: row;  
+    justify-content:space-around;
+    align-items: center;
+    border-bottom: solid 1px #000;
+    max-width: 75%;
+    margin: auto;    
+}
+.logo{
+    padding: 10px 10px;
+    margin: 10px 10px;      
+    position: relative;   
+}
+ h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    font-style: oblique;
+}
+ /*seccion MENU*/
+.menuWeb{  
+     padding: 10px 10px; 
+     background-color: #fff !important;   
+}
+.nav-item a{
+    font-family: 'Lato', sans-serif;
+    padding: 0px 15px;
+    color:#000 !important;
+    font-weight:bold;
+
+}
+.navbar-nav li a:hover{
+    color: #ecb5d2 !important;  
+} 
+/*seccion SERVICIO 3 */
+.serviciosContenedor1{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin: auto;
+    max-width: 75%;
+}
+.divServ{
+    background-color:#fff;
+    width: 300px;
+    height: 465px;
+    padding: 10px 5px;
+    margin: 0 10px 30px;
+    box-sizing: content-box;
+    box-shadow: 1px 1px 11px 6px rgba(223,197,222,0.75);          
+} 
+.divServ img{
+    margin: auto;
+    align-items: center;
+    border-radius: 10px; 
+    transition: all 1s;
+}
+.divServ:hover {
+    transform: scale(1.1) !important;   
+}
+.servicios-enlace {
+    color:black;
+    margin: auto; 
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    border-top: solid 1px #000;
+    margin-top: 5px;
+}
+.servicios-enlace a{
+    text-decoration: none;
+}
+.servicios-enlace a h3:hover {
+    color:#a7688a;
+}
+.servicios-enlace a h3{
+    font-family: 'Yellowtail', cursive;
+    font-weight: lighter;
+    color: #000; 
+    text-align: center;   
+}
+.listadoServ{
+    display:inline-block;
+    margin-top: 10px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    list-style: none;
+    list-style-position: inside;
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+}
+/*seccion productos recomendados*/
+.secProductos {
+    max-width: 75%;
+    margin: auto;
+    border-top:solid 0.5px #000 ;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    color: black;
+    font-size: 20px;         
+}
+.secProductosText h4{
+    padding-bottom: 10px;
+    text-align: center;
+}
+.secProductosText p{
+    text-indent: 1rem;
+}
+.carousel-item img{
+    padding: 25px;
+}
+   
+/*seccion sobre MI*/
+.secSobrefr-contenedor {
+    background-image: url('Imagenes/fondo\ rosa.jpg');
+    max-width: 75%;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    border-top:solid 0.5px #000 ;  
+}
+
+.secSobrefr-contenedor img{
+    border-radius: 50%;
+    padding: 0 10px;
+    align-items: center; 
+}
+.secSobrefr-contenedor p{
+    color:#000;
+    padding: 0px 20px; 
+    text-align:center;
+    text-indent: 5%;
+    font-size: 1rem;  
+    margin-bottom: 0rem;     
+}
+.footer {
+    background-color: #000;
+    margin-top: 20px;
+    padding-top: 10px;          
+}
+.contacto{
+    max-width:75%;
+    height: 10%;
+    margin: auto;
+    display: flex; 
+    flex-direction: column;
+    justify-content:center;
+    align-items: center; 
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: initial;
+    font-size: 15px;  
+}
+.contacto h2{
+    padding-bottom: 15px;
+}
+.contacto ul li{
+    padding-top: 10px;
+}
+.contacto ul li a{
+    text-decoration: none;
+    color: #fff;   
+}
+/*makeup.html*/
+.contenedorMakeup{
+    max-width: 75%;
+    margin:100px auto; 
+}
+/*cejas.html*/
+.contenedorCejas{
+    max-width: 75%;
+    margin: 50px auto;
+} 
+/*pestañas.html*/
+.contenedorPestañas{
+    max-width: 75%;
+    background-color: #fff;
+    margin: 50px auto; 
+}
+/*card-detalle-servicios*/
+.card-group{
+    margin-bottom: 10px;
+    transition: all 5s;
+}
+.card-group:hover {
+    transform:scale(1.1) !important;
+}
+.card-body {
+    background-color: rgba(206,182,204,0.75);
+    text-align: center;
+} 
+.card-body h5 {
+    color: #000;
+    text-decoration: none ;
+    font-family: 'Yellowtail', cursive;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.card-title{
+    text-decoration: none !important;
+}
+.card-text, .text-muted {
+    text-indent: 1rem;
+}
+/*trabajos.html*/
+.contenedor-trabajos{
+    max-width: 75%;
+    margin: auto;
+    box-sizing: content-box;
+    padding: 40px 0px 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(3, 350px);
+    grid-template-areas:
+    "foto1 foto2 foto3"
+    "foto4 foto5 foto6"
+    "foto7 foto8 foto9";
+}
+/*
+@media only screen and (max-width:570px ){
+    .contenedor-trabajos{
+        display: grid;
+        grid-template-columns: 400px;
+        grid-template-rows: repeat(9, 1fr);
+        justify-content: center;
+    }
+}*/
+
+.contenedor-trabajos img:hover{
+    transform: scale(1.3);
+}
+.fototrabajo1{
+    grid-area: foto1;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    transition: all 1s;
+}
+.fototrabajo2{
+    grid-area: foto2;
+   border-radius: 5px;
+   width: 300px;
+   height: 300px;
+   transition: all 1s;
+}
+.fototrabajo3{
+    grid-area: foto3;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    transition: all 1s;
+}
+.fototrabajo4{
+    grid-area: foto4;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    transition: all 1s;
+}
+.fototrabajo5{
+    grid-area: foto5;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    transition: all 1s;
+}
+.fototrabajo6{
+    grid-area: foto6;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    transition: all 1s;
+}
+.fototrabajo7{
+    grid-area: foto7;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    transition: all 1s;
+}
+.fototrabajo8{
+    grid-area: foto8;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    transition: all 1s;
+}
+.fototrabajo9{
+    grid-area: foto9;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    transition: all 1s;
+}
+/* celu*/
+@media only screen and (max-width:570px ){
+    .portada{
+        display: none;
+    }
+    .secSobrefr img{
+        margin: auto;
+    }   
+}
+/*tablet*/
+@media only screen and (min-width:571px) and (max-width:850px) {
+    
+}
+
+     

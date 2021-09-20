@@ -1,0 +1,36 @@
+.footer {
+    background-color: #000;
+    margin-top: 20px;
+    padding-top: 10px; 
+    .contacto{
+        @include container-body; 
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        font-style: initial;
+        text-align: center;
+           
+        h2{
+            font-size: 25px;
+        }
+        div{
+            list-style-type: none;
+            padding-bottom: 10px;
+            padding-top: 5px;
+            li{
+                font-size: 18px;
+                &:hover{
+                    color:nth($colores, 2 )
+                }  
+                a{
+                    text-decoration: none;
+                    color: #fff; 
+                    &:hover{
+                        color:nth($colores, 2 )
+                    }
+     
+                }
+            }
+        }
+
+    }         
+}

@@ -1,0 +1,12 @@
+
+@mixin container-body{
+    max-width: 75%;
+    margin: auto;
+}
+
+@mixin container-cards {
+    max-width: 75%;
+    margin:25px auto;
+    padding: 25px;
+    border-bottom: solid 1px #000;    
+}

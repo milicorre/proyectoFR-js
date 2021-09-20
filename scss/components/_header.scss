@@ -1,0 +1,64 @@
+.portada {
+    padding: 5px 5px;
+    width: 100%;
+    background-color: nth($colores, 6);
+    z-index: 25;
+    text-align: center;
+}
+
+@media only screen and (max-width:768px) {
+    .portada {
+        display: none;
+    }
+}
+
+.contenedorLogoMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid 1px #000;
+    @include container-body;
+}
+
+.logo {
+    padding: 10px 10px;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    font-style: oblique;
+    margin: auto;
+    padding: 0 5px;
+    text-align: center;
+
+}
+
+.menuWeb {
+    padding: 10px 10px;
+    background-color: #fff !important;
+
+}
+
+.navbar-nav {
+    .nav-item {
+        a {
+            font-family: 'Lato', sans-serif;
+            padding: 0px 15px;
+            color: #000 !important;
+            font-weight: bold;
+
+            &:hover {
+                color: nth($colores, 2) !important;
+
+            }
+
+        }
+    }
+
+}
+
+.dropdown-menu {
+    min-width: auto;
+}

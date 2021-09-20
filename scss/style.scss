@@ -1,0 +1,22 @@
+*{
+    margin: 0; 
+    padding: 0; 
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+@import 'bases/listas';
+@import 'bases/mixin';
+
+@import 'components/header';
+@import 'components/servicios';
+@import 'components/aside';
+@import 'components/sobremi';
+@import 'components/footer';
+@import 'components/cards';
+@import 'components/trabajos';
+
+
+
+
+

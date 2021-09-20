@@ -1,0 +1,37 @@
+.titulo-trabajos{
+    @include container-body;
+    padding-top: 2rem;
+    font-weight: bold;
+}
+.contenedor-trabajos{
+    @include container-body;
+    box-sizing: content-box;
+    padding: 40px 0px 40px;
+    .trabajos-item{
+        padding: 15px;
+        img{
+            margin: auto;
+            padding-bottom: 10px;
+            border-radius: 5px;
+            &:hover{
+                transform: scale(1.3);
+                transition: all 1s;
+                box-shadow: 5px 5px 30px 10px rgba(180, 160, 180, 0.75) ;
+            }
+        }
+        h3{
+            font-size: 2rem;
+            &:hover{
+                font-weight: bold;
+            }
+        }     
+    }    
+}
+
+.fototrabajo1{
+    grid-area: foto1;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    transition: all 1s;
+}
