@@ -1,4 +1,6 @@
-const tienda =[]
+const tienda =[];
+const carrito = [];
+
 
 class Servicio {
     constructor(servicio) {
@@ -43,7 +45,7 @@ for(const producto of tienda){
     document.getElementById(`${producto.id}`).addEventListener('click', () => adquisicion(producto))
 }
 
-const carrito = [];
+
 
 
 
@@ -64,7 +66,11 @@ function adquisicion(servicio) {
         setTimeout(() => {
             aviso.innerHTML = "";
             }, 2000);
-
+        const carrod =document.getElementById('detalle-carrito');
+        const nombreS = document.createElement('div');
+        nombreS.innerHTML=`<li>${servicio.nombre}</li>
+                        `
+        carrod.appendChild(nombreS)
     }
 
     let total = 0;
@@ -75,22 +81,46 @@ function adquisicion(servicio) {
     const TotalApagar = document.getElementById('totalServs');
     TotalApagar.innerHTML =`Total a pagar: $${total}` ;
     localStorage.setItem('carrito', JSON.stringify(carrito));
-}
 
+    localStorage.setItem('pagar', JSON.stringify(total) )
+}
 
 
 
 function cargarLocalStorage(){
-    let carro = JSON.parse(localStorage.getItem('carrito'))
+    let carro = JSON.parse(localStorage.getItem('carrito'));
+    let totalpagar = JSON.parse(localStorage.getItem('pagar'));
+
+    const mostrarCarrito = document.getElementById('detalle-carrito')
     if(carro){
         for(let i = 0; i < carro.length; i++){
             carrito.push(new Servicio(carro[i].id, carro[i].nombre, carro[i].precio, carro[i].tiempo, carro[i].zona, carro[i].descripcion))
+            const nombre = document.createElement('div');
+            nombre.innerHTML=`<p>${carro[i].nombre}</p>`
+            mostrarCarrito.appendChild(nombre)
         }
+        let total = 0;
+        for(let i=0; i<carrito.length;i++){
+            total += carrito[i].precio;
+        }  
     }
+    const TotalApagar = document.getElementById('totalServs');
+    TotalApagar.innerHTML =`Total a pagar: $${total}` ;
+    
+     /*)
+     if(totalpagar){
+        
+        const totalPagar = document.createElement('div')
+        totalPagar.innerHTML=`<p> Total a pagar $ ${total} </p>`;
+        TotalApagar.appendChild(totalPagar)
+
+        }*/
+        
+    
 }
 
 
-
+cargarLocalStorage();
 
 
 
