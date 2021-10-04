@@ -89,36 +89,26 @@ function adquisicion(servicio) {
 
 function cargarLocalStorage(){
     let carro = JSON.parse(localStorage.getItem('carrito'));
-    let totalpagar = JSON.parse(localStorage.getItem('pagar'));
+    let totalpagar = JSON.parse(localStorage.getItem('pagar')) || 0;
 
     const mostrarCarrito = document.getElementById('detalle-carrito')
     if(carro){
         for(let i = 0; i < carro.length; i++){
-            carrito.push(new Servicio(carro[i].id, carro[i].nombre, carro[i].precio, carro[i].tiempo, carro[i].zona, carro[i].descripcion))
+            carrito.push(new Servicio({id:carro[i].id, nombre:carro[i].nombre,precio: carro[i].precio, tiempo:carro[i].tiempo, zona:carro[i].zona, descripcion:carro[i].descripcion}))
             const nombre = document.createElement('div');
             nombre.innerHTML=`<p>${carro[i].nombre}</p>`
             mostrarCarrito.appendChild(nombre)
         }
-        let total = 0;
-        for(let i=0; i<carrito.length;i++){
-            total += carrito[i].precio;
+        
         }  
+
+        const TotalApagar = document.getElementById('totalServs');
+        TotalApagar.innerHTML =`Total a pagar: $${totalpagar}` ;
     }
-    const TotalApagar = document.getElementById('totalServs');
-    TotalApagar.innerHTML =`Total a pagar: $${total}` ;
-    
-     /*)
-     if(totalpagar){
-        
-        const totalPagar = document.createElement('div')
-        totalPagar.innerHTML=`<p> Total a pagar $ ${total} </p>`;
-        TotalApagar.appendChild(totalPagar)
 
-        }*/
-        
+  
     
-}
-
+    
 
 cargarLocalStorage();
 
