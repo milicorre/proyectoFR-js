@@ -25,8 +25,8 @@ const nutricion = new Servicio ({id:9, nombre:"Nutrición", precio: 800, tiempo:
 
 tienda.push(lifting, extensiones, serviceDeExtensiones, extraccion, nutricionP, perfilado, laminado, tinte, nutricion)
 
-const container = document.getElementById('container-cards');
-const aviso = document.getElementById("aviso");
+const container = $('#container-cards');
+const aviso = document.getElementById('aviso');
 
 for(const producto of tienda){
     const card = document.createElement('div');
@@ -42,7 +42,8 @@ for(const producto of tienda){
                         <button id=${producto.id} class='btn btn-secondary'>ADQUIRIR SERVICIO</button>
                     </div>`
     container.append(card);
-    document.getElementById(`${producto.id}`).addEventListener('click', () => adquisicion(producto))
+    
+    $(`#${producto.id}`).click( () => adquisicion(producto))
 }
 
 
